@@ -1,0 +1,56 @@
+# EVENTS
+{
+  "type": "MESSAGE",
+  “token”: “E6jGWpS_mIoszAXSsGYPAtfgjiIbES1IhvHBYBJrNcg=”
+  "eventTime": "2017-03-02T19:02:59.910959Z",
+  "space": {
+    "name": "spaces/AAAAAAAAAAA",
+    "displayName": "Chuck Norris Discussion Room",
+    "type": "ROOM"
+  },
+  "message": {
+    "name": "spaces/AAAAAAAAAAA/messages/CCCCCCCCCCC",
+    "sender": {
+      "name": "users/12345678901234567890",
+      "displayName": "Chuck Norris",
+      "avatarUrl": "https://lh3.googleusercontent.com/.../photo.jpg",
+      "email": "chuck@example.com"
+    },
+    "createTime": "2017-03-02T19:02:59.910959Z",
+    "text": "Violence is my last option.",
+    "thread": {
+      "name": "spaces/AAAAAAAAAAA/threads/BBBBBBBBBBB"
+    }
+  }
+}
+
+{
+  "type": "ADDED_TO_SPACE",
+  "eventTime": "2017-03-02T19:02:59.910959Z",
+  "space": {
+    "name": "spaces/AAAAAAAAAAA",
+    "displayName": "Chuck Norris Discussion Room"
+    "type": "ROOM"
+  },
+  "user": {
+    "name": "users/12345678901234567890",
+    "displayName": "Chuck Norris",
+    "avatarUrl": "https://lh3.googleusercontent.com/.../photo.jpg",
+    "email": "chuck@example.com"
+  }
+}
+
+{
+  "type": "REMOVED_FROM_SPACE",
+  "eventTime": "2017-03-02T19:02:59.910959Z",
+  "space": {
+    "name": "spaces/AAAAAAAAAAA",
+    "type": "DM"
+  },
+  "user": {
+    "name": "users/12345678901234567890",
+    "displayName": "Chuck Norris",
+    "avatarUrl": "https://lh3.googleusercontent.com/.../photo.jpg",
+    "email": "chuck@example.com"
+  }
+}
