@@ -1,2 +1,3 @@
 # gcloud-functions
-Google Cloud Functions
+
+A dumping ground for random Google Cloud Functions
