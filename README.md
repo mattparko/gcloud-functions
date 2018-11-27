@@ -2,7 +2,7 @@
 
 A dumping ground for random Google Cloud Functions
 
-#### dad-joke.py
+#### dad-joke
 * Returns a dad joke retrieved from icanhazdadjoke.com
 * Uses the Python 3.7 (Beta) runtime
 * Supports Google Hangouts Chat, with bot name `@DadBot`
@@ -11,7 +11,7 @@ A dumping ground for random Google Cloud Functions
   * Search for a joke: `@DadBot search <query>`  
   * Show this help message: `@DadBot help`  
 
-#### xkcd.py
+#### xkcd
 * Returns an xkcd comic, formatted using a Hangouts "card"
 * Uses the Python 3.7 (Beta) runtime
 * Supports Google Hangouts Chat, with bot name `@xkcd`
