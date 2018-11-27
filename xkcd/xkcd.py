@@ -7,7 +7,7 @@ import random
 import re
 from flask import jsonify
 
-BOTNAME = "xkcd-test"
+BOTNAME = "xkcd"
 
 def get_comic(comic_number):
     headers = {"Accept": "application/json", "Content-type": "application/json"}
