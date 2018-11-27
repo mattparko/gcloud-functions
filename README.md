@@ -12,7 +12,8 @@ A dumping ground for random Google Cloud Functions
   * Show this help message: `@DadBot help`  
 
 #### xkcd
-* Returns an xkcd comic, formatted using a Hangouts "card"
+* Returns an xkcd comic
+* Can be easily switched to using a Hangouts "card" format
 * Uses the Python 3.7 (Beta) runtime
 * Supports Google Hangouts Chat, with bot name `@xkcd`
 * Usage:
