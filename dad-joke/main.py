@@ -6,9 +6,11 @@ import requests
 import random
 from flask import jsonify
 
+BOTNAME = "DadBot"
+HEADERS = {"Accept": "application/json", "Content-type": "application/json"}
+
 def get_random_joke():
-    headers = {"Accept": "application/json", "Content-type": "application/json"}
-    r = requests.get("https://icanhazdadjoke.com/", headers=headers)
+    r = requests.get("https://icanhazdadjoke.com/", headers=HEADERS)
     return r.json()["joke"]
 
 def target_joke(name, requester):
@@ -22,8 +24,7 @@ def target_joke(name, requester):
         return "I'm sorry, <{}>. I'm afraid I can't do that".format(requester)
 
 def search_jokes(search_term):
-    headers = {"Accept": "application/json", "Content-type": "application/json"}
-    r = requests.get("https://icanhazdadjoke.com/search?term=" + search_term, headers=headers)
+    r = requests.get("https://icanhazdadjoke.com/search?term=" + search_term, headers=HEADERS)
     jokes = r.json()["results"]
     if jokes:
         return random.choice(jokes)["joke"]
@@ -31,14 +32,11 @@ def search_jokes(search_term):
         return "No search results"
 
 def get_help_text():
-    return """
-Hi! I can help with all of your Dad Joke needs
-
-Actions:
-*Get a random joke:* @DadBot random
-*Search for a joke:* @DadBot search <query>
-*Show this help message:* @DadBot help
-"""
+    return (f"Hi! I can help with all of your Dad Joke needs\n\n"
+            f"Actions:\n"
+            f"*Get a random joke:* @{BOTNAME} random\n"
+            f"*Search for a joke:* @{BOTNAME} search <query>\n"
+            f"*Show this help message:* @{BOTNAME} help")
 
 def main(request):
     event_type = request.json["type"]
