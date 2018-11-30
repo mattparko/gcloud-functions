@@ -42,8 +42,8 @@ def main(request):
     event_type = request.json["type"]
     if event_type == "MESSAGE":
         message = request.json["message"]["text"].split()
-        # Remove "@DadBot" from message to handle both group chats and DMs
-        if message[0] == "@DadBot":
+        # Remove "@BOTNAME" from message to handle both group chats and DMs
+        if message[0] == "@{}".format(BOTNAME):
             message.pop(0)
         if message[0].lower() == "random":
             response = get_random_joke()
