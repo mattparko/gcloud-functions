@@ -45,7 +45,7 @@ def main(request):
         # Remove "@BOTNAME" from message to handle both group chats and DMs
         if message[0] == "@{}".format(BOTNAME):
             message.pop(0)
-        if message[0].lower() == "random":
+        if not message or message[0].lower() == "random":
             response = get_random_joke()
         elif message[0].lower() == "search":
             response = search_jokes(' '.join(message[1:]))
